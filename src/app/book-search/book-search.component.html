@@ -1,0 +1,9 @@
+<div class="site-header">
+  <h1>BOOKS</h1>
+
+  <mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="Search..." #searchValue (keydown.enter)="onSearch(searchValue.value)">
+  </mat-form-field>
+</div>
+
+<app-search-results *ngIf="showResults" [books$]="books$"></app-search-results>
